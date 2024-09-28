@@ -1,0 +1,18 @@
+user:
+  email: test12345@gmail.com
+  password: Maclaren#06
+
+search_keyword: phone
+
+delivery_info:
+  name: hanami
+  surename: papika
+  address: 20/321 bkk thailand
+  phone: 0891132235
+  email: test12345@gmail.com
+
+credit_card:
+  number: 4111111111111111
+  exp: 10/2025
+  cvv: 111
+  owner: boston
