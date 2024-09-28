@@ -31,6 +31,7 @@ Resource    ./locators/register_page_locator.robot
 Resource    ./features/account_page_feature.robot
 Resource    ./features/common_feature.robot
 Resource    ./features/delivery_info_page_feature.robot
+Resource    ./features/header_bar_feature.robot
 Resource    ./features/home_page_feature.robot
 Resource    ./features/login_page_feature.robot
 Resource    ./features/payment_credit_page_feature.robot

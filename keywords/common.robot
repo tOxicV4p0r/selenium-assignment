@@ -34,11 +34,7 @@ Get modal message
 
 Clear all pop up
     # clear modal
-    TRY
-        Click OK button on modal confirmation
-    EXCEPT
-        BuiltIn.Pass Execution    not found modal
-    END
+    BuiltIn.Run Keyword And Ignore Error    Click OK button on modal confirmation
 
 Click OK button on modal confirmation
     SeleniumLibrary.Wait Until Element Is Visible    ${ant_modal_locator.modal_btn_confirm}    1s

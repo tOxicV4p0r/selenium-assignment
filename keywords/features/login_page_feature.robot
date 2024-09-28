@@ -13,3 +13,13 @@ Login with username and password
     login_page.Click login
     # common.Page should display modal popup
     # common.Click OK on modal confirmation
+
+Is login successfully
+    ${message}    common_feature.Get message from modal popup
+    # Login Failed
+    # Login successfully
+    IF    '${message}' == 'Login successfully'
+        RETURN    ${True}
+    END
+
+    RETURN    ${False}

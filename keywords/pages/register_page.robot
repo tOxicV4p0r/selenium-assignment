@@ -26,5 +26,6 @@ Fill confirm password
 
 Click signup
     SeleniumLibrary.Wait Until Element Is Visible    ${register_locator.btn_signup}
+    SeleniumLibrary.Click Element    ${register_locator.btn_signup}
 
     
