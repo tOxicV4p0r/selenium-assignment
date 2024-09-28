@@ -1,7 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-Variables    ../resources/setting/uat/setting.yaml
+Variables    ../resources/setting/default.yaml
+Variables    ../resources/setting/${env}/setting.yaml
 Variables    ../resources/testdata/testdata.yaml
 
 Resource    ./common.robot

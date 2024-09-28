@@ -15,3 +15,12 @@ Should display successful message
     ${message}    common.Get modal message
     RETURN    ${message}
     
+Is pay successfully
+    ${message}    common_feature.Get message from modal popup
+    # Payment Failed
+    # Payment successfully
+    IF    '${message}' == 'Payment successfully'
+        RETURN    ${True}
+    END
+
+    RETURN    ${False}
