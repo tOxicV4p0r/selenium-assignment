@@ -8,12 +8,12 @@ Suite Teardown    common.Clear all browser instance
 *** Test Cases ***
 Should buy item with search product successfully
     home_page.Goto page
-    # common.Click account icon on header bar
-    # login_page.Click signup
-    # register_page_feature.Register with data    username=${user.email}    password=${user.password}    confirmpassword=${user.password}
-    # ${result}    register_page_feature.Is register successfully
-    # Should Be Equal    ${result}    ${True}    register failed
-    # header_bar_feature.Logout user
+    common.Click account icon on header bar
+    login_page.Click signup
+    register_page_feature.Register with data    username=${user.email}    password=${user.password}    confirmpassword=${user.password}
+    ${result}    register_page_feature.Is register successfully
+    Should Be Equal    ${result}    ${True}    register failed
+    header_bar_feature.Logout user
     login_page_feature.Login with username and password    username=${user.email}    password=${user.password}
     ${result}    login_page_feature.Is login successfully
     Should Be Equal    ${result}    ${True}    login failed

@@ -1,5 +1,5 @@
 user:
-  email: test0123456@gmail.com
+  email: test01234567@gmail.com
   password: Test1234#06
 
 search_keyword: phone
@@ -9,7 +9,7 @@ delivery_info:
   surename: papika
   address: 20/321 bkk thailand
   phone: 0891132235
-  email: test0123456@gmail.com
+  email: test01234567@gmail.com
 
 credit_card:
   number: 4111111111111111
