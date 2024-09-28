@@ -15,7 +15,7 @@ Get order description
     ${txt_result}    Get Text    ${payment_success_locator.txt_desc}
     RETURN    ${txt_result}
 
-Click continue shopping
+Click continue shopping button
     Wait Until Element Is Visible    ${payment_success_locator.btn_continue_shopping}
     Click Element    ${payment_success_locator.btn_continue_shopping}
     Wait Until Element Is Not Visible    ${payment_success_locator.btn_continue_shopping}

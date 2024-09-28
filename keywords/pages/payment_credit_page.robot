@@ -25,7 +25,7 @@ Fill card owner
     Wait Until Element Is Visible    ${payment_credit_card_locator.input_card_owner}
     Input Text    ${payment_credit_card_locator.input_card_owner}    ${text}
 
-Click comfirm payment
+Click comfirm payment button
     Wait Until Element Is Visible    ${payment_credit_card_locator.btn_confirm}
     Click Element    ${payment_credit_card_locator.btn_confirm}
 

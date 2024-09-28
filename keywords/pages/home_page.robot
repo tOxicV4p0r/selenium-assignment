@@ -8,11 +8,11 @@ Goto page
 Wait for page
     Wait Until Element Is Visible    ${home_locator.icon_user}
 
-Click account
+Click account icon on header bar
     Wait Until Element Is Visible    ${header_bar_locator.icon_user}
     Click Element    ${header_bar_locator.icon_user}
 
-Click shopping cart
+Click shopping cart icon on header bar
     Wait Until Element Is Visible    ${header_bar_locator.icon_shopping_cart}
     Click Element    ${header_bar_locator.icon_shopping_cart}
 

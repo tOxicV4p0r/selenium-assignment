@@ -11,15 +11,15 @@ Clear all browser instance
 Goto homepage
     SeleniumLibrary.Go To    url=${url}
 
-Goto home by clicking title icon
+Goto home by clicking title icon on header bar
     Wait Until Element Is Visible    ${header_bar_locator.icon_title}
     Click Element    ${header_bar_locator.icon_title}
 
-Click shopping cart
+Click shopping cart icon on header bar
     Wait Until Element Is Visible    ${header_bar_locator.icon_shopping_cart}
     Click Element    ${header_bar_locator.icon_shopping_cart}
 
-Click account
+Click account icon on header bar
     Wait Until Element Is Visible    ${header_bar_locator.icon_user}
     Click Element    ${header_bar_locator.icon_user}
 

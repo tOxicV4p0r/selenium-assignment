@@ -29,6 +29,6 @@ Fill email
     Wait Until Element Is Visible    ${delivery_info_locator.input_email}
     Input Text    ${delivery_info_locator.input_email}    ${text}
 
-Click payment
+Click payment button
     Wait Until Element Is Visible    ${delivery_info_locator.btn_payment}
     Click Element    ${delivery_info_locator.btn_payment}
