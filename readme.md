@@ -2,7 +2,7 @@
 
 **Running the Test**
 
-The main test file is named scenario.robot. You can run the test by passing the `-v env:uat` parameter for environment setup.
+The main test file is named `scenario.robot`. Run the test by passing the `-v env:uat` parameter for environment setup.
 
 To execute the test:
 ```bash
