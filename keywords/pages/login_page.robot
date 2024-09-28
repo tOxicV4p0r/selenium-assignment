@@ -3,22 +3,23 @@ Resource    ../import.robot
 
 *** Keywords ***
 Wait for page
-    Wait Until Element Is Visible    ${login_locator.input_username}
+    SeleniumLibrary.Wait Until Element Is Visible    ${login_locator.input_username}
 
 Fill username
     [Arguments]    ${text}
-    Wait Until Element Is Visible    ${login_locator.input_username}
-    Input Text    ${login_locator.input_username}    ${text}
+    SeleniumLibrary.Wait Until Element Is Visible    ${login_locator.input_username}
+    SeleniumLibrary.Input Text    ${login_locator.input_username}    ${text}
 
 Fill password
     [Arguments]    ${text}
-    Wait Until Element Is Visible    ${login_locator.input_password}
-    Input Text    ${login_locator.input_password}    ${text}
+    SeleniumLibrary.Wait Until Element Is Visible    ${login_locator.input_password}
+    SeleniumLibrary.Input Text    ${login_locator.input_password}    ${text}
 
 Click login
-    Wait Until Element Is Visible    ${login_locator.btn_login}
-    Click Element    ${login_locator.btn_login}
+    SeleniumLibrary.Wait Until Element Is Visible    ${login_locator.btn_login}
+    SeleniumLibrary.Click Element    ${login_locator.btn_login}
 
 Click signup
-    Wait Until Element Is Visible    ${login_locator.btn_signup}
-    Click Element    ${login_locator.btn_signup}
+    SeleniumLibrary.Wait Until Element Is Visible    ${login_locator.btn_signup}
+    SeleniumLibrary.Click Element    ${login_locator.btn_signup}
+    SeleniumLibrary.Wait Until Element Is Not Visible    ${login_locator.btn_signup}

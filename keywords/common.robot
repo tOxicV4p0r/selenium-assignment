@@ -9,29 +9,38 @@ Clear all browser instance
     SeleniumLibrary.Close All Browsers
 
 Goto homepage
+    Clear all pop up
     SeleniumLibrary.Go To    url=${url}
 
 Goto home by clicking title icon on header bar
-    Wait Until Element Is Visible    ${header_bar_locator.icon_title}
-    Click Element    ${header_bar_locator.icon_title}
+    SeleniumLibrary.Wait Until Element Is Visible    ${header_bar_locator.icon_title}
+    SeleniumLibrary.Click Element    ${header_bar_locator.icon_title}
 
 Click shopping cart icon on header bar
-    Wait Until Element Is Visible    ${header_bar_locator.icon_shopping_cart}
-    Click Element    ${header_bar_locator.icon_shopping_cart}
+    SeleniumLibrary.Wait Until Element Is Visible    ${header_bar_locator.icon_shopping_cart}
+    SeleniumLibrary.Click Element    ${header_bar_locator.icon_shopping_cart}
 
 Click account icon on header bar
-    Wait Until Element Is Visible    ${header_bar_locator.icon_user}
-    Click Element    ${header_bar_locator.icon_user}
+    SeleniumLibrary.Wait Until Element Is Visible    ${header_bar_locator.icon_user}
+    SeleniumLibrary.Click Element    ${header_bar_locator.icon_user}
 
 Page should display modal popup
-    Wait Until Element Is Visible    ${ant_modal_locator.modal_container}
+    SeleniumLibrary.Wait Until Element Is Visible    ${ant_modal_locator.modal_container}
 
 Get modal message
-    Wait Until Element Is Visible    ${ant_modal_locator.modal_content}
+    SeleniumLibrary.Wait Until Element Is Visible    ${ant_modal_locator.modal_content}
     ${txt_result}     Get Text    ${ant_modal_locator.modal_content}
     RETURN    ${txt_result}
 
+Clear all pop up
+    # clear modal
+    TRY
+        Click OK button on modal confirmation
+    EXCEPT
+        BuiltIn.Pass Execution    not found modal
+    END
+
 Click OK button on modal confirmation
-    Wait Until Element Is Visible    ${ant_modal_locator.modal_btn_confirm}
-    Click Element    ${ant_modal_locator.modal_btn_confirm}
-    Wait Until Element Is Not Visible    ${ant_modal_locator.modal_btn_confirm}
+    SeleniumLibrary.Wait Until Element Is Visible    ${ant_modal_locator.modal_btn_confirm}    1s
+    SeleniumLibrary.Click Element    ${ant_modal_locator.modal_btn_confirm}
+    SeleniumLibrary.Wait Until Element Is Not Visible    ${ant_modal_locator.modal_btn_confirm}    1s

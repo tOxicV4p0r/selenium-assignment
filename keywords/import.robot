@@ -36,3 +36,4 @@ Resource    ./features/login_page_feature.robot
 Resource    ./features/payment_credit_page_feature.robot
 Resource    ./features/payment_success_page_feature.robot
 Resource    ./features/product_detail_page_feature.robot
+Resource    ./features/register_page_feature.robot

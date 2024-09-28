@@ -14,7 +14,7 @@ Is found the order with order id
     [Arguments]    ${order_id}
     @{order_ids}    account_page.Get list of order id
     Log To Console    ${order_ids} 
-    ${index}    Get Index From List    ${order_ids}    ${order_id}
+    ${index}    Collections.Get Index From List    ${order_ids}    ${order_id}
     Log To Console    found: ${index}
     IF    ${index} > -1
         RETURN    ${True}

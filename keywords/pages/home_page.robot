@@ -3,34 +3,35 @@ Resource    ../import.robot
 
 *** Keywords ***
 Goto page
-    Go To    url=${url}
+    SeleniumLibrary.Go To    url=${url}
+    SeleniumLibrary.Wait Until Element Is Visible    ${home_locator.icon_user}
 
 Wait for page
-    Wait Until Element Is Visible    ${home_locator.icon_user}
+    SeleniumLibrary.Wait Until Element Is Visible    ${home_locator.icon_user}
 
 Click account icon on header bar
-    Wait Until Element Is Visible    ${header_bar_locator.icon_user}
-    Click Element    ${header_bar_locator.icon_user}
+    SeleniumLibrary.Wait Until Element Is Visible    ${header_bar_locator.icon_user}
+    SeleniumLibrary.Click Element    ${header_bar_locator.icon_user}
 
 Click shopping cart icon on header bar
-    Wait Until Element Is Visible    ${header_bar_locator.icon_shopping_cart}
-    Click Element    ${header_bar_locator.icon_shopping_cart}
+    SeleniumLibrary.Wait Until Element Is Visible    ${header_bar_locator.icon_shopping_cart}
+    SeleniumLibrary.Click Element    ${header_bar_locator.icon_shopping_cart}
 
 Fill search
     [Arguments]    ${txt_search}
-    Wait Until Element Is Visible    ${home_locator.input_search}
-    Input Text    ${home_locator.input_search}    ${txt_search}
+    SeleniumLibrary.Wait Until Element Is Visible    ${home_locator.input_search}
+    SeleniumLibrary.Input Text    ${home_locator.input_search}    ${txt_search}
 
 Click search
-    Wait Until Element Is Visible    ${home_locator.btn_search}
-    Click Element    ${home_locator.btn_search}
-    Wait Until Element Is Visible    ${home_locator.item_card}    3s
+    SeleniumLibrary.Wait Until Element Is Visible    ${home_locator.btn_search}
+    SeleniumLibrary.Click Element    ${home_locator.btn_search}
+    SeleniumLibrary.Wait Until Element Is Visible    ${home_locator.item_card}    3s
 
 Click item by index
     [Arguments]    ${index}=${0}
-    @{elements}=    Get WebElements    ${home_locator.item_card}
-    Click Element    ${elements}[${index}]
+    @{elements}=    SeleniumLibrary.Get WebElements    ${home_locator.item_card}
+    SeleniumLibrary.Click Element    ${elements}[${index}]
 
 Get the number of products displayed
-    ${count}=    Get Element Count    ${home_locator.item_card}
+    ${count}=    SeleniumLibrary.Get Element Count    ${home_locator.item_card}
     RETURN    ${count}
